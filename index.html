@@ -1,202 +1,229 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glass-calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <main class="main">
-        <section class="select-glass">
+        <section class="section select-glass">
+            
             <div class="container">
                 <div class="info-part">
                     <h1 class="title">Калькулятор</h1>
+
                     <h2 class="title-section">Стекло с резкой
-                        <span class="price">(мин. цена = как за 0,06кв.м.)</span>
+                        <span class="price-title">(мин. цена = как за 0,06кв.м.)</span>
                     </h2>
                 </div>
-                <div class="select-part thickness">
-                    <select class="select">
-                        <option class="select-item" disabled selected>Выберите толщину стекла</option>
-                        <option class="select-item">Зеркало</option>
-                        <option class="select-item">4 мм</option>
-                        <option class="select-item">5 мм</option>
-                        <option class="select-item">6 мм</option>
-                        <option class="select-item">8 мм</option>
-                        <option class="select-item">10 мм</option>
-                        <option class="select-item">12 мм</option>
-                        <option class="select-item">15 мм</option>
-                        <option class="select-item">19 мм</option>
-                    </select>
-                </div>
-                <div class="input__size">
-                    <p class="inner-title">введите размер изделия</p>
-                    <input class="input-number width" type="number" placeholder="введите ширину">
-                    <input class="input-number height" type="number" placeholder="введите высоту">
-                </div>
+                    <div class="select-wrapper">
+                        <select class="select">
+                            <option class="select-item" disabled selected>Выберите толщину стекла</option>
+                            <option class="select-item">Зеркало</option>
+                            <option class="select-item">4 мм</option>
+                            <option class="select-item">5 мм</option>
+                            <option class="select-item">6 мм</option>
+                            <option class="select-item">8 мм</option>
+                            <option class="select-item">10 мм</option>
+                            <option class="select-item">12 мм</option>
+                            <option class="select-item">15 мм</option>
+                            <option class="select-item">19 мм</option>
+                        </select>
+                    </div>
+                    <p class="text">Введите размер изделия</p>
+                    <div class="input__size">
+                        <input min="0" class="input-number width" type="number" placeholder="введите ширину">
+                        <input min="0" class="input-number height" type="number" placeholder="введите высоту">
+                    </div>
                 <div class="select-part glass">
-                    <select class="select mirror">
-                        <option class="select-item" disabled selected>Выберите стекло</option>
-                        <option class="select-item">Зерк.4 серебро(AGC)
-                            <span class="price">1800₽</span>
-                        </option>
-                        <option class="select-item">Зерк.6мм (AGC)
-                            <span class="price">3300₽</span>
-                        </option>
-                        <option class="select-item">Зерк.4/бронза
-                            <span class="price">3500₽</span>
-                        </option>
-                        <option class="select-item">Зерк.4/серое
-                            <span class="price">3500₽</span>
-                        </option>
-                        <option class="select-item">Зерк.4осв (AGC)
-                            <span class="price">4050₽</span>
-                        </option>
-                        <option class="select-item">Зерк.6/осв. (AGC)
-                            <span class="price">4700₽</span>
-                        </option>
-                        <option class="select-item">Зерк.4/сатин/сереб
-                            <span class="price">3900₽</span>
-                        </option>
-                        <option class="select-item">Зерк.4/сатин/бронз
-                            <span class="price">5280₽</span>
-                        </option>
-                        <option class="select-item">Зеркало4/состарен.«Морена»
-                            <span class="price">13000₽</span>
-                        </option>
-                        <option class="select-item">Зеркало-античное (Италия)
-                            <span class="price">60000₽</span>
-                        </option>
-                        <option class="select-item">Зеркало4мм/состаренное (Китай)
-                            <span class="price">12900₽</span>
-                        </option>
-                    </select>
-                    <select class="select thickness-4mm">
-                        <option class="select-item" disabled selected>Выберите стекло</option>
-                        <option class="select-item">4мм б/цв
-                            <span class="price">1250₽</span>
-                        </option>
-                        <option class="select-item">4мм бронза,серое,голубое
-                            <span class="price">1900₽</span>
-                        </option>
-                        <option class="select-item">4мм осв.
-                            <span class="price">2700₽</span>
-                        </option>
-                        <option class="select-item">4мм мат.б/цв(AGC)
-                            <span class="price">2050₽</span>
-                        </option>
-                        <option class="select-item">4мм двустор.мат.
-                            <span class="price">3180₽</span>
-                        </option>
-                        <option class="select-item">4мм мат.бронза
-                            <span class="price">3300₽</span>
-                        </option>
-                        <option class="select-item">4мм Moru
-                            <span class="price">1800₽</span>
-                        </option>
-                        <option class="select-item">Лакобель 4мм
-                            <span class="color">1015,9005,1236</span>
-                            <span class="price">3500₽</span>
-                        </option>
-                        <option class="select-item">Лакобель 4мм
-                            <span class="color">9003,1013</span>
-                            <span class="price">4380₽</span>
-                        </option>
-                        <option class="select-item">Лакобель 4мм
-                            <span class="color">Другие цвета</span>
-                            <span class="price">7250₽</span>
-                        </option>
-                    </select>
-                    <select class="select thickness-5mm">
-                        <option class="select-item" disabled selected>Выберите стекло</option>
-                        <option class="select-item">5мм б/цв<span class="price">1550₽</span></option>
-                    </select>
-                    <select class="select thickness-6mm">
-                        <option class="select-item" disabled selected>Выберите стекло</option>
-                        <option class="select-item">6мм б/цв
-                            <span class="price">1550 ₽</span>
-                        </option>
-                        <option class="select-item">6мм бронз
-                            <span class="price">3200₽</span>
-                        </option>
-                        <option class="select-item">6мм серое
-                            <span class="price">2900₽</span>
-                        </option>
-                        <option class="select-item">6мм т.синее
-                            <span class="price">7200₽</span>
-                        </option>
-                        <option class="select-item">6мм осв.
-                            <span class="price">4260₽</span>
-                        </option>
-                        <option class="select-item">6мм осв/мат.
-                            <span class="price">5360₽</span>
-                        </option>
-                        <option class="select-item">6мм мат.б/цв
-                            <span class="price">2920₽</span>
-                        </option>
-                        <option class="select-item">6мм двустор.мат.
-                            <span class="price">2600₽</span>
-                        </option>
-                    </select>
-                    <select class="select thickness-8mm">
-                        <option class="select-item" disabled selected>Выберите стекло</option>
-                        <option class="select-item">8мм б/цв</option>
-                        <option class="select-item">8мм бронза,серое</option>
-                        <option class="select-item">8мм темно серое</option>
-                        <option class="select-item">8мм.освю</option>
-                        <option class="select-item">8мм осв<div class=""></div>мат.</option>
-                        <option class="select-item">8мм мат.б/цв</option>
-                        <option class="select-item">8мм мат./бронза</option>
-                        <option class="select-item">8мм Miristar (зеркальное)</option>
-                    </select>
-                    <select class="select thickness-10mm">
-                        <option class="select-item" disabled selected>Выберите стекло</option>
-                        <option class="select-item">10мм б/цв</option>
-                        <option class="select-item">10мм/бронза,серое</option>
-                        <option class="select-item">10мм осв.</option>
-                        <option class="select-item">10мм осв./матов</option>
-                        <option class="select-item">10мм /мат/б/цв </option>
-                    </select>
-                    <select class="select thickness-12mm">
-                        <option class="select-item" disabled selected>Выберите стекло</option>
-                        <option class="select-item">12мм б/цв</option>
-                    </select>
-                    <select class="select thickness-15mm">
-                        <option class="select-item" disabled selected>Выберите стекло</option>
-                        <option class="select-item">15мм б/цв</option>
-                        <option class="select-item">15мм осв.</option>
-                    </select>
-                    <select class="select thickness-19mm">
-                        <option class="select-item" disabled selected>Выберите стекло</option>
-                        <option class="select-item">19мм б/цв</option>
-                        <option class="select-item">19мм осв.</option>
-                    </select>
+                    <div class="select-wrapper">
+                        <select class="select mirror">
+                            <option class="select-item" disabled selected>Выберите стекло</option>
+                            <option class="select-item">Зерк.4 серебро(AGC)
+                                <span class="price">1800₽</span>
+                            </option>
+                            <option class="select-item">Зерк.6мм (AGC)
+                                <span class="price">3300₽</span>
+                            </option>
+                            <option class="select-item">Зерк.4/бронза
+                                <span class="price">3500₽</span>
+                            </option>
+                            <option class="select-item">Зерк.4/серое
+                                <span class="price">3500₽</span>
+                            </option>
+                            <option class="select-item">Зерк.4осв (AGC)
+                                <span class="price">4050₽</span>
+                            </option>
+                            <option class="select-item">Зерк.6/осв. (AGC)
+                                <span class="price">4700₽</span>
+                            </option>
+                            <option class="select-item">Зерк.4/сатин/сереб
+                                <span class="price">3900₽</span>
+                            </option>
+                            <option class="select-item">Зерк.4/сатин/бронз
+                                <span class="price">5280₽</span>
+                            </option>
+                            <option class="select-item">Зеркало4/состарен.«Морена»
+                                <span class="price">13000₽</span>
+                            </option>
+                            <option class="select-item">Зеркало-античное (Италия)
+                                <span class="price">60000₽</span>
+                            </option>
+                            <option class="select-item">Зеркало4мм/состаренное (Китай)
+                                <span class="price">12900₽</span>
+                            </option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <select class="select thickness-4mm">
+                            <option class="select-item" disabled selected>Выберите стекло</option>
+                            <option class="select-item">4мм б/цв
+                                <span class="price">1250₽</span>
+                            </option>
+                            <option class="select-item">4мм бронза,серое,голубое
+                                <span class="price">1900₽</span>
+                            </option>
+                            <option class="select-item">4мм осв.
+                                <span class="price">2700₽</span>
+                            </option>
+                            <option class="select-item">4мм мат.б/цв(AGC)
+                                <span class="price">2050₽</span>
+                            </option>
+                            <option class="select-item">4мм двустор.мат.
+                                <span class="price">3180₽</span>
+                            </option>
+                            <option class="select-item">4мм мат.бронза
+                                <span class="price">3300₽</span>
+                            </option>
+                            <option class="select-item">4мм Moru
+                                <span class="price">1800₽</span>
+                            </option>
+                            <option class="select-item">Лакобель 4мм
+                                <span class="color">1015,9005,1236</span>
+                                <span class="price">3500₽</span>
+                            </option>
+                            <option class="select-item">Лакобель 4мм
+                                <span class="color">9003,1013</span>
+                                <span class="price">4380₽</span>
+                            </option>
+                            <option class="select-item">Лакобель 4мм
+                                <span class="color">Другие цвета</span>
+                                <span class="price">7250₽</span>
+                            </option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <select class="select thickness-5mm">
+                            <option class="select-item" disabled selected>Выберите стекло</option>
+                            <option class="select-item">5мм б/цв<span class="price">1550₽</span></option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <select class="select thickness-6mm">
+                            <option class="select-item" disabled selected>Выберите стекло</option>
+                            <option class="select-item">6мм б/цв
+                                <span class="price">1550 ₽</span>
+                            </option>
+                            <option class="select-item">6мм бронз
+                                <span class="price">3200₽</span>
+                            </option>
+                            <option class="select-item">6мм серое
+                                <span class="price">2900₽</span>
+                            </option>
+                            <option class="select-item">6мм т.синее
+                                <span class="price">7200₽</span>
+                            </option>
+                            <option class="select-item">6мм осв.
+                                <span class="price">4260₽</span>
+                            </option>
+                            <option class="select-item">6мм осв/мат.
+                                <span class="price">5360₽</span>
+                            </option>
+                            <option class="select-item">6мм мат.б/цв
+                                <span class="price">2920₽</span>
+                            </option>
+                            <option class="select-item">6мм двустор.мат.
+                                <span class="price">2600₽</span>
+                            </option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <select class="select thickness-8mm">
+                            <option class="select-item" disabled selected>Выберите стекло</option>
+                            <option class="select-item">8мм б/цв</option>
+                            <option class="select-item">8мм бронза,серое</option>
+                            <option class="select-item">8мм темно серое</option>
+                            <option class="select-item">8мм.освю</option>
+                            <option class="select-item">8мм осв<div class=""></div>мат.</option>
+                            <option class="select-item">8мм мат.б/цв</option>
+                            <option class="select-item">8мм мат./бронза</option>
+                            <option class="select-item">8мм Miristar (зеркальное)</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <select class="select thickness-10mm">
+                            <option class="select-item" disabled selected>Выберите стекло</option>
+                            <option class="select-item">10мм б/цв</option>
+                            <option class="select-item">10мм/бронза,серое</option>
+                            <option class="select-item">10мм осв.</option>
+                            <option class="select-item">10мм осв./матов</option>
+                            <option class="select-item">10мм /мат/б/цв </option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <select class="select thickness-12mm">
+                            <option class="select-item" disabled selected>Выберите стекло</option>
+                            <option class="select-item">12мм б/цв</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <select class="select thickness-15mm">
+                            <option class="select-item" disabled selected>Выберите стекло</option>
+                            <option class="select-item">15мм б/цв</option>
+                            <option class="select-item">15мм осв.</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <select class="select thickness-19mm">
+                            <option class="select-item" disabled selected>Выберите стекло</option>
+                            <option class="select-item">19мм б/цв</option>
+                            <option class="select-item">19мм осв.</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="cutting">
-                    <p class="inner-title" >Выберите тип резки</p>
+                    <p class="inner-title">Выберите тип резки</p>
                     <input class="input-radio" type="radio" id="ratio1" name="cutting">
                     <label class="label-radio" for="ratio1"> Резка стекла прямоугольной формы</label>
-    
+
                     <input class="input-radio" type="radio" id="ratio1.2" name="cutting">
-                    <label class="label-radio" for="ratio1.2"> Резка стекла непрямоугольной формы (трапеция, треугольник)
-                    <span>коэф 1,1.</span></label>
-    
+                    <label class="label-radio" for="ratio1.2"> Резка стекла непрямоугольной формы (трапеция,
+                        треугольник)
+                        <span>коэф 1,1.</span></label>
+
                     <input class="input-radio" type="radio" id="ratio1.3" name="cutting">
                     <label class="label-radio" for="ratio1.3">Резка стекла криволинейной формы
-                    <span>коэффициент 1,3</span></label>
-                    
+                        <span>коэффициент 1,3</span></label>
+
                     <div class="add-services__cutting">
                         <div class="servise-scanning">
                             <input class="input-checkbox" type="checkbox" id="сheckbox-service__scanning">
-                            <label class="label-checkbox" for="сheckbox-service__scanning">Сканирование шаблона <span class="price">(1500 ₽./шт)</span></label>
-                                <div class="quantity-scanning">
-                                    <input class="input-number scanning" type="number" placeholder="Колличество шаблонов">
-                                </div>
+                            <label class="label-checkbox" for="сheckbox-service__scanning">Сканирование шаблона <span
+                                    class="price">(1500 ₽./шт)</span></label>
+                            <div class="quantity-scanning">
+                                <input class="input-number scanning" type="number" placeholder="Колличество шаблонов">
+                            </div>
                         </div>
-                        
+
                         <div class="servise-milling">
                             <input class="input-checkbox" type="checkbox" id="сheckbox-service__cutting">
                             <label class="label-checkbox" for="сheckbox-service__cutting"> Резка фрезой за п/м</label>
@@ -204,17 +231,16 @@
                             <div class="milling-processing">
                                 <input class="input-radio" type="radio" id="off-processing" name="milling">
                                 <label class="label-radio" for="off-processing">без обработки</label>
-        
+
                                 <input class="input-radio" type="radio" id="on-processing" name="milling">
                                 <label class="label-radio" for="on-processing">с обработкай</label>
                             </div>
                         </div>
-                    </div>        
+                    </div>
                 </div>
-                
             </div>
         </section>
-        <section class="processing">
+        <!--         <section class="section processing">
             <div class="container">
                 <div class="select-processing">
                     <h2 class="title-section">Обработка кромки
@@ -299,114 +325,193 @@
                 </div>
             </div>
         </section>
-        <section class="decor">
-            <div class="engraving">
-                <h2 class="title-section">Гравирование
-                    <span class="price">(за п/м. линии гравировки)</span>
-                </h2>
-                <div class="radio-box">
-                    <input type="radio" id="polish" name="engraving">
-                    <label for="polish">Полированная</label>
-    
-                    <input type="radio" id="grind" name="engraving">
-                    <label for="grind">Шлифованная</label>
+        <section class="section decor">
+            <div class="container">
+                <div class="engraving">
+                    <h2 class="title-section">Гравирование
+                        <span class="price">(за п/м. линии гравировки)</span>
+                    </h2>
+                    <div class="radio-box">
+                        <input type="radio" id="polish" name="engraving">
+                        <label for="polish">Полированная</label>
+        
+                        <input type="radio" id="grind" name="engraving">
+                        <label for="grind">Шлифованная</label>
+                    </div>
+                    <select class="select">
+                        <option class="select-item" disabled selected>Ширина гравировки</option>
+                        <option class="select-item">Ширина 4-6мм</option>
+                        <option class="select-item">Ширина 10мм</option>
+                        <option class="select-item">Ширина 15мм</option>
+                    </select>
                 </div>
-                <select class="select">
-                    <option class="select-item" disabled selected>Ширина гравировки</option>
-                    <option class="select-item">Ширина 4-6мм</option>
-                    <option class="select-item">Ширина 10мм</option>
-                    <option class="select-item">Ширина 15мм</option>
-                </select>
+                <div class="sandblast">
+                    <h2 class="title-section">Пескоструйная обработка
+                        <span class="price"> (за кв.м. детали). Min=0.25кв.м.</span>
+                    </h2>
+                    <select class="select">
+                        <option class="select-item" disabled selected>Тип обработки</option>
+                        <option class="select-item">Стекло, зеркало по рисунку
+                            <span class="price">3050₽</span>
+                        </option>
+                        <option class="select-item">Амальгама по рисунку
+                            <span class="price">3200₽</span>
+                        </option>
+                        <option class="select-item">Сплошная
+                            <span class="price">1320₽</span>
+                        </option>
+                    </select>
+                    <p class="text">При рисунке расположенном на части стекла( менее половины детали) скидка 50%</p>
+                    <p class="text">Возможно применение коэфициента на сложные рисунки (определяется специалистом)</p>
+                    <p class="text">В стоимость входит покрытие "защита от пятен"</p>
+                </div>
+                <div class="film-sticker">
+                    <h2 class="title-section">Наклейка пленок
+                        <span class="price">( за кв.м.) Min=0.25кв.м.</span>
+                    </h2>
+                    <select class="select">
+                        <option class="select-item" disabled selected>Тип пленки</option>
+                        <option class="select-item">Кристалл(3М)(ш-1200мм)
+                            <span class="color">с блеском розов.,голуб.</span>
+                            <span class="price">3300₽</span>
+                        </option>
+                        <option class="select-item">Кристалл(3М)(ш-1200мм)
+                            <span class="color">белый,коричневый</span>
+                            <span class="price">4300₽</span>
+                        </option>
+                        <option class="select-item">Кристалл(3М)(ш-1200мм)
+                            <span class="color">с блеском плотерная</span>
+                            <span class="price">4420₽</span>
+                        </option>
+                        <option class="select-item">Кристалл(3М)(ш-1200мм)
+                            <span class="color">по габариту рисунка</span>
+                            <span class="price">5420₽</span>
+                        </option>
+                        <option class="select-item">Оракал
+                            <span class="color">с наклейкой белый</span>
+                            <span class="price">1250₽</span>
+                        </option>
+                        <option class="select-item">Оракал
+                            <span class="color">цветной</span>
+                            <span class="price">2400₽</span>
+                        </option>
+                        <option class="select-item">Металик не прозрачная черная(ш-1200мм)
+                            <span class="price">1030₽</span>
+                        </option>
+                        <option class="select-item">Vetropan декор MG(ш-1200мм)
+                            <span class="price"> 4500₽</span>
+                        </option>
+                        <option class="select-item">Vetropan декор DG,EM(ш-1200мм)
+                            <span class="price">3600₽</span>
+                        </option>
+                        <option class="select-item">Ламинация зеркал (защита)
+                            <span class="price">200₽</span>
+                        </option>
+                        <option class="select-item">Демонтаж пленки
+                            <span class="price">200₽</span>
+                        </option>
+                    </select>
+                    <p class="text">Минимально возможный размер для изготовления Vetropan 200*200м/ Минимальный заказ 1 кв.м.</p>
+                </div>
+                <div class="uv-printing">
+                    <h2 class="title-section">УФ-печать
+                        <span class="price">( за кв.м.) Min=0.25кв.м.</span>
+                    </h2>
+                    <select class="select">
+                        <option class="select-item" disabled selected>Тип стекла</option>
+                        <option class="select-item">Сатин (стекло, зеркало)
+                            <span class="price">3600₽</span>
+                        </option>
+                        <option class="select-item">Стекло, зеркало
+                            <span class="price">2300₽</span>
+                        </option>
+                        <option class="select-item">Пленка, пластик, МДФ, ЛДСП
+                            <span class="price">2090₽</span>
+                        </option>
+                    </select>
+                </div>
+                <div class="fuzing">
+                    <h2 class="title-section">Фьюзинг
+                        <span class="price">( с учетом стоимости стекла)</span>
+                    </h2>
+                    <p class="text">Из цветного стекла декоры (ассортимент на складе)
+                        <span class="price">От 200р за шт.</span>
+                    </p>
+                    <input class="input-number" type="number" placeholder="Колличество штук">
+                </div>
             </div>
-            <div class="sandblast">
-                <h2 class="title-section">Пескоструйная обработка
-                    <span class="price"> (за кв.м. детали). Min=0.25кв.м.</span>
-                </h2>
-                <select class="select">
-                    <option class="select-item" disabled selected>Тип обработки</option>
-                    <option class="select-item">Стекло, зеркало по рисунку
-                        <span class="price">3050₽</span>
-                    </option>
-                    <option class="select-item">Амальгама по рисунку
-                        <span class="price">3200₽</span>
-                    </option>
-                    <option class="select-item">Сплошная
-                        <span class="price">1320₽</span>
-                    </option>
-                </select>
-                <p class="text">При рисунке расположенном на части стекла( менее половины детали) скидка 50%</p>
-                <p class="text">Возможно применение коэфициента на сложные рисунки (определяется специалистом)</p>
-                <p class="text">В стоимость входит покрытие "защита от пятен"</p>
-            </div>
-            <div class="film-sticker">
-                <h2 class="title-section">Наклейка пленок
-                    <span class="price">( за кв.м.) Min=0.25кв.м.</span>
-                </h2>
-                <select class="select">
-                    <option class="select-item" disabled selected>Тип пленки</option>
-                    <option class="select-item">Кристалл(3М)(ш-1200мм)
-                        <span class="color">с блеском розов.,голуб.</span>
-                        <span class="price">3300₽</span>
-                    </option>
-                    <option class="select-item">Кристалл(3М)(ш-1200мм)
-                        <span class="color">белый,коричневый</span>
-                        <span class="price">4300₽</span>
-                    </option>
-                    <option class="select-item">Кристалл(3М)(ш-1200мм)
-                        <span class="color">с блеском плотерная</span>
-                        <span class="price">4420₽</span>
-                    </option>
-                    <option class="select-item">Кристалл(3М)(ш-1200мм)
-                        <span class="color">по габариту рисунка</span>
-                        <span class="price">5420₽</span>
-                    </option>
-                    <option class="select-item">Оракал
-                        <span class="color">с наклейкой белый</span>
-                        <span class="price">1250₽</span>
-                    </option>
-                    <option class="select-item">Оракал
-                        <span class="color">цветной</span>
-                        <span class="price">2400₽</span>
-                    </option>
-                    <option class="select-item">Металик не прозрачная черная(ш-1200мм)
-                        <span class="price">1030₽</span>
-                    </option>
-                    <option class="select-item">Vetropan декор MG(ш-1200мм)
-                        <span class="price"> 4500₽</span>
-                    </option>
-                    <option class="select-item">Vetropan декор DG,EM(ш-1200мм)
-                        <span class="price">3600₽</span>
-                    </option>
-                    <option class="select-item">Ламинация зеркал (защита)
-                        <span class="price">200₽</span>
-                    </option>
-                    <option class="select-item">Демонтаж пленки
-                        <span class="price">200₽</span>
-                    </option>
-                </select>
-                <p class="text">Минимально возможный размер для изготовления Vetropan 200*200м/ Минимальный заказ 1 кв.м.</p>
-            </div>
-            <div class="uv-printing">
-                <h2 class="title-section">УФ-печать
-                    <span class="price">( за кв.м.) Min=0.25кв.м.</span>
-                </h2>
-                <select class="select">
-                    <option class="select-item" disabled selected>Тип стекла</option>
-                    <option class="select-item">Сатин (стекло, зеркало)
-                        <span class="price">3600₽</span>
-                    </option>
-                    <option class="select-item">Стекло, зеркало
-                        <span class="price">2300₽</span>
-                    </option>
-                    <option class="select-item">Пленка, пластик, МДФ, ЛДСП
-                        <span class="price">2090₽</span>
-                    </option>
-                </select>
-            </div> 
         </section>
+        <section class="section heat-treatment">
+            <div class="container">
+                <div class="tempering">
+                    <h2 class="title-section">Термообработка
+                        <span class="price">( за кв.м)</span>
+                    </h2>
+                    <input class="input-checkbox" type="checkbox" id="tempering">
+                    <label class="label-checkbox" for="tempering">Закалка</label>
+                    <p class="text">При закалке стекла, кромка обязательно должна обрабатываться, отверстия -
+                        зенковаться!</p>
+                </div>
+                <div class="triplex">
+                    <h2 class="title-section">Триплекс
+                        <span class="price">Min=0.25кв.м</span>
+                    </h2>
+                    <p class="text">В общем случае, считаем стоимость стекла + стоимость пленки+ стоимость стекла и.т.д.</p>
+                    <select class="select">
+                        <option class="select-item" disabled selected>Тип пленки</option>
+                        <option class="select-item">1 слой 0,38мм полимерной прозрачной пленки EVA
+                            <span class="price">1900₽</span>
+                        </option>
+                        <option class="select-item">1слой матовой, Цветной пленки за 1 м2( 0,38)
+                            <span class="price">2800₽</span>
+                        </option>
+                    </select>
+                    <input class="input-checkbox" type="checkbox" id="tempering">
+                    <label class="label-checkbox" for="tempering">2-й и последующие слой прозрачной 0,38
+                        <span class="price">900₽</span>
+                    </label>
+                    <p class="text">1 слой пленки ( 0,38мм) рекомендуется для стекол до 6мм</p>
+                    <p class="text">2 слоя пленки (0,38) рекомендуется для стекол от 8мм</p>
+                    <p class="text">от 2-х слоев пленки рекомендуется для закаленных стекол</p>
+                    <p class="text">При S более 4кв.м или весе от 90кг повышающий коэфициент 25%</p>
+                    <p class="text">Стоимость криволинейно обработки триплекса складывается из стоимости 
+                        криволинейной обработки каждого стекла.</p>
+                    <p class="text">При заказе от 20 м/кв. предусматриваются скидки</p>
+                </div>
+            </div>
+        </section>
+        <section class="section delivery">
+            <div class="container">
+                <div class="type-delivery">
+                    <h2 class="title-section">Доставка</h2>
+                    <select class="select">
+                        <option class="select-item" disabled selected>Тип доставки</option>
+                        <option class="select-item">Самовывоз</option>
+                        <option class="select-item">Доставка по Краснодару до подъезда без разгрузки
+                            <span class="price">1000₽</span>
+                        </option>
+                        <option class="select-item">В нерабочее время
+                            <span class="price">1900₽</span>
+                        </option>
+                        <option class="select-item">По межгороду
+                            <span class="price-select">35 ₽/км</span>
+                            <input type="number" placeholder="Колличество км">
+                        </option>
+                    </select>
+                    <input type="checkbox" id="packaging">
+                    <label for="packaging">Упаковка в гофрокартон 
+                        <span class="price-packaging">200 ₽. за кв.м</span>
+                    </label>
+                    <p class="text">Претензии по качеству продукции из давальческого материала - не принимаются. Гарантии не распространяются.</p>
+                    <p class="text">Хранение на складе готовой продукции не более 5 дней. Далее-платно</p>
+                    <p class="text">Минимальная стоимость заказа 3500₽.</p>
+                </div>
+            </div>
+        </section> -->
     </main>
-    
+
 
     <script src="mainJS/script.js"></script>
 </body>
+
 </html>

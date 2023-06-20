@@ -22,7 +22,7 @@ time, mark, audio, video {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
