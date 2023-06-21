@@ -9,6 +9,8 @@ body {
 .container {
   max-width: 1140px;
   margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .info-part {
   text-align: center;
@@ -91,4 +93,70 @@ body {
 }
 ::placeholder{
   font-size: 20px;
+}
+.mirror,.thickness-4mm,.thickness-5mm,
+.thickness-6mm,.thickness-8mm,.thickness-10mm,
+.thickness-12mm,.thickness-15mm,.thickness-19mm{
+  display: none;
+}
+.cutting{
+  margin-top: 20px;
+}
+.cutting-radio{
+  display: flex;
+  flex-direction: column;
+}
+.servise-scanning{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.scanning{
+  display: none ;
+}
+.servise-milling{
+  margin-top: 20px;
+}
+.milling-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input-milling{
+  display: none;
+}
+.milling-processing{
+  margin-top: 10px;
+  display: none;
+}
+.add-services__processing{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.corner{
+  display: none;
+}
+.radio-box{
+  margin-top: 10px;
+  display: none;
+}
+.holes{
+  display: none;
+}
+
+.checkbox-wrapper__holes,.checkbox-wrapper__cutout{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.active-holes{
+  display: none;
+}
+.price-triplex__holes{
+  display: block;
+  font-size: 15px;
+  font-weight: 300;
 }
