@@ -36,7 +36,7 @@ body {
   font-weight: 300;
 }
 .text{
-  margin: 20px 20px 0;
+  margin: 10px 20px 0;
 }
 .select-wrapper {
   position: relative;
@@ -73,6 +73,9 @@ body {
 }
 .section::-ms-expand {
   display: none;
+}
+.input-checkbox{
+  cursor: pointer;
 }
 .input__size{
   display: flex;
@@ -159,4 +162,44 @@ body {
   display: block;
   font-size: 15px;
   font-weight: 300;
+}
+.checkbox-inner{
+  margin-top: 10px;
+}
+.cutout-accessories,.cutout-bra{
+  display: none;
+}
+.price-section{
+  display: block;
+}
+.fuzing-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.packaging-inner{
+  margin-top: 20px;
+}
+.input-packaging{
+  display: none;
+}
+.delivery{
+  margin-bottom: 17vh;
+}
+.footer{
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  background-color: #b5b4b4b5;
+}
+.footer-inner{ 
+  height: 15vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.total-price{
+  font-size: 40px;
+  margin-right: 30px;
 }
