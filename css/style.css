@@ -1,16 +1,17 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.5;
   color: #212529;
-  background: #e4e4e4;
+  background: #fff;
 }
 .container {
   max-width: 1140px;
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
+  padding-bottom: 30px;
 }
 .info-part {
   text-align: center;
@@ -33,7 +34,7 @@ body {
 }
 .price {
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 200;
 }
 .text{
   margin: 10px 20px 0;
@@ -50,6 +51,7 @@ body {
   transform: translateY(-50%);
   width: 0;
   height: 0;
+  pointer-events: none;
   border-width: 15px 9px 0 9px;
   border-color: #8c8c8c transparent transparent transparent;
   border-style: solid;
@@ -71,7 +73,7 @@ body {
 .select:focus {
   box-shadow: 0px 0px 0px 1px #4b4e51, 0px 0px 10px #4b4e51;
 }
-.section::-ms-expand {
+.select::-ms-expand {
   display: none;
 }
 .input-checkbox{
@@ -97,11 +99,12 @@ body {
 ::placeholder{
   font-size: 20px;
 }
-.mirror,.thickness-4mm,.thickness-5mm,
-.thickness-6mm,.thickness-8mm,.thickness-10mm,
-.thickness-12mm,.thickness-15mm,.thickness-19mm{
+#mirror,#thickness-4mm,#thickness-5mm,
+#thickness-6mm,#thickness-8mm,#thickness-10mm,
+#thickness-12mm,#thickness-15mm,#thickness-19mm{
   display: none;
 }
+
 .cutting{
   margin-top: 20px;
 }
@@ -191,7 +194,7 @@ body {
   position: fixed;
   z-index: 3;
   bottom: 0;
-  background-color: #b5b4b4b5;
+  background-color: #b5b4b48d;
 }
 .footer-inner{ 
   height: 15vh;

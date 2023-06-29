@@ -25,29 +25,24 @@
                         <span class="price-title">(мин. цена = как за 0,06кв.м.)</span>
                     </h2>
                 </div>
-                    <div class="select-wrapper">
-                        <select class="select">
-                            <option class="select-item" disabled selected>Выберите толщину стекла</option>
-                            <option class="select-item">Зеркало</option>
-                            <option class="select-item">4 мм</option>
-                            <option class="select-item">5 мм</option>
-                            <option class="select-item">6 мм</option>
-                            <option class="select-item">8 мм</option>
-                            <option class="select-item">10 мм</option>
-                            <option class="select-item">12 мм</option>
-                            <option class="select-item">15 мм</option>
-                            <option class="select-item">19 мм</option>
-                        </select>
-                    </div>
-                    <p class="text">Введите размер изделия</p>
-                    <div class="input__size">
-                        <input min="0" class="input-number width" type="number" placeholder="введите ширину">
-                        <input min="0" class="input-number height" type="number" placeholder="введите высоту">
-                    </div>
+                <div class="select-wrapper">
+                    <select class="select select-thickness">
+                        <option class="select-item" selected>Выберите толщину стекла</option>
+                        <option class="select-item" value="mirror">Зеркало</option>
+                        <option class="select-item" value="thickness-4mm">4 мм</option>
+                        <option class="select-item" value="thickness-5mm">5 мм</option>
+                        <option class="select-item" value="thickness-6mm">6 мм</option>
+                        <option class="select-item" value="thickness-8mm">8 мм</option>
+                        <option class="select-item" value="thickness-10mm">10 мм</option>
+                        <option class="select-item" value="thickness-12mm">12 мм</option>
+                        <option class="select-item" value="thickness-15mm">15 мм</option>
+                        <option class="select-item" value="thickness-19mm">19 мм</option>
+                    </select>
+                </div>
                 <div class="select-part glass">
-                    <div class="select-wrapper mirror">
+                    <div class="select-wrapper" id="mirror">
                         <select class="select">
-                            <option class="select-item" disabled selected>Выберите стекло</option>
+                            <option class="select-item" disabled selected>Выберите зеркало</option>
                             <option class="select-item">Зерк.4 серебро(AGC)
                                 <span class="price">1800₽</span>
                             </option>
@@ -83,9 +78,9 @@
                             </option>
                         </select>
                     </div>
-                    <div class="select-wrapper thickness-4mm">
+                    <div class="select-wrapper" id="thickness-4mm">
                         <select class="select">
-                            <option class="select-item" disabled selected>Выберите стекло</option>
+                            <option class="select-item" disabled selected>Выберите стекло 4мм</option>
                             <option class="select-item">4мм б/цв
                                 <span class="price">1250₽</span>
                             </option>
@@ -121,15 +116,15 @@
                             </option>
                         </select>
                     </div>
-                    <div class="select-wrapper thickness-5mm">
+                    <div class="select-wrapper" id="thickness-5mm">
                         <select class="select">
-                            <option class="select-item" disabled selected>Выберите стекло</option>
+                            <option class="select-item" disabled selected>Выберите стекло 5мм</option>
                             <option class="select-item">5мм б/цв<span class="price">1550₽</span></option>
                         </select>
                     </div>
-                    <div class="select-wrapper thickness-6mm">
+                    <div class="select-wrapper" id="thickness-6mm">
                         <select class="select">
-                            <option class="select-item" disabled selected>Выберите стекло</option>
+                            <option class="select-item" disabled selected>Выберите стекло 6мм</option>
                             <option class="select-item">6мм б/цв
                                 <span class="price">1550 ₽</span>
                             </option>
@@ -156,9 +151,9 @@
                             </option>
                         </select>
                     </div>
-                    <div class="select-wrapper thickness-8mm">
+                    <div class="select-wrapper" id="thickness-8mm">
                         <select class="select">
-                            <option class="select-item" disabled selected>Выберите стекло</option>
+                            <option class="select-item" disabled selected>Выберите стекло 8мм</option>
                             <option class="select-item">8мм б/цв
                                 <span class="price">2800₽</span>
                             </option>
@@ -185,9 +180,9 @@
                             </option>
                         </select>
                     </div>
-                    <div class="select-wrapper thickness-10mm">
+                    <div class="select-wrapper" id="thickness-10mm">
                         <select class="select">
-                            <option class="select-item" disabled selected>Выберите стекло</option>
+                            <option class="select-item" disabled selected>Выберите стекло 10мм</option>
                             <option class="select-item">10мм б/цв
                                 <span class="price">3000₽</span>
                             </option>
@@ -205,17 +200,17 @@
                             </option>
                         </select>
                     </div>
-                    <div class="select-wrapper thickness-12mm">
+                    <div class="select-wrapper" id="thickness-12mm">
                         <select class="select">
-                            <option class="select-item" disabled selected>Выберите стекло</option>
+                            <option class="select-item" disabled selected>Выберите стекло 12мм</option>
                             <option class="select-item">12мм б/цв
                                 <span class="price">5100₽</span>
                             </option>
                         </select>
                     </div>
-                    <div class="select-wrapper thickness-15mm">
+                    <div class="select-wrapper" id="thickness-15mm">
                         <select class="select">
-                            <option class="select-item" disabled selected>Выберите стекло</option>
+                            <option class="select-item" disabled selected>Выберите стекло 15мм</option>
                             <option class="select-item">15мм б/цв
                                 <span class="price">15000₽</span>
                             </option>
@@ -224,9 +219,9 @@
                             </option>
                         </select>
                     </div>
-                    <div class="select-wrapper thickness-19mm">
+                    <div class="select-wrapper" id="thickness-19mm">
                         <select class="select">
-                            <option class="select-item" disabled selected>Выберите стекло</option>
+                            <option class="select-item" disabled selected>Выберите стекло 19мм</option>
                             <option class="select-item">19мм б/цв
                                 <span class="price">18000₽</span>
                             </option>
@@ -236,57 +231,63 @@
                         </select>
                     </div>
                 </div>
+                <p class="text">Введите размер изделия</p>
+                <div class="input__size">
+                    <input min="0" class="input-number width" type="number" placeholder="введите ширину">
+                    <input min="0" class="input-number height" type="number" placeholder="введите высоту">
+                </div>
                 <p class="text">Выберите тип резки</p>
                 <div class="cutting">
                     <div class="cutting-radio">
-                        <div class="radio-box">
+                        <div class="radio-wrapper__">
                             <input class="input-radio" type="radio" id="ratio1" name="cutting">
                             <label class="label-radio" for="ratio1"> Резка стекла прямоугольной формы</label>
                         </div>
-                        
-                        <div class="radio-box">
+                        <div class="radio-wrapper__">
                             <input class="input-radio" type="radio" id="ratio1.2" name="cutting">
-                            <label class="label-radio" for="ratio1.2"> Резка стекла непрямоугольной формы (трапеция,
-                                треугольник)
+                            <label class="label-radio" for="ratio1.2"> Резка стекла непрямоугольной формы (трапеция,треугольник)
                                 <span>коэффициент 1,1.</span></label>
                         </div>
-                        <div class="radio-box">
+                        <div class="radio-wrapper__cutting">
                             <input class="input-radio" type="radio" id="ratio1.3" name="cutting">
                             <label class="label-radio" for="ratio1.3">Резка стекла криволинейной формы
                                 <span>коэффициент 1,3</span></label>
                         </div>
                     </div>
-                    <div class="add-services__cutting">
-                        <div class="servise-scanning">
-                            <div class="scanning-checkbox">
-                                <input class="input-checkbox" type="checkbox" id="сheckbox-service__scanning">
-                                <label class="label-checkbox" for="сheckbox-service__scanning">Сканирование шаблона <span
-                                        class="price">(1500 ₽./шт)</span></label>
-                            </div>
-                            <input class="input-number scanning" type="number" placeholder="Колличество шаблонов">
+                </div>
+                <div class="add-services__cutting">
+                    <div class="servise-scanning">
+                        <div class="scanning-checkbox">
+                            <input class="input-checkbox" type="checkbox" id="сheckbox-service__scanning">
+                            <label class="label-checkbox" for="сheckbox-service__scanning">Сканирование шаблона <span
+                                    class="price">(1500 ₽./шт)</span></label>
                         </div>
+                        <input min="0" class="input-number scanning" type="number" placeholder="Колличество шаблонов">
+                    </div>
 
-                        <div class="servise-milling">
-                            <div class="milling-wrapper">
-                                <div class="milling-checkbox">
-                                    <input class="input-checkbox" type="checkbox" id="сheckbox-service__cutting">
-                                    <label class="label-checkbox" for="сheckbox-service__cutting"> Резка фрезой за п/м</label>
-                                </div>
-                                <input class="input-number input-milling" type="number" placeholder="введите колличество п/м">
+                    <div class="servise-milling">
+                        <div class="milling-wrapper">
+                            <div class="milling-checkbox">
+                                <input class="input-checkbox" type="checkbox" id="сheckbox-service__cutting">
+                                <label class="label-checkbox" for="сheckbox-service__cutting"> Резка фрезой за
+                                    п/м</label>
                             </div>
-                            <div class="milling-processing">
-                                <div class="processing-radio">
-                                    <input class="input-radio" type="radio" id="off-processing" name="milling">
-                                    <label class="label-radio" for="off-processing">без обработки</label>
-                                </div> 
-                                <div class="processing-radio">
-                                    <input class="input-radio" type="radio" id="on-processing" name="milling">
-                                    <label class="label-radio" for="on-processing">с обработкай</label>
-                                </div>
+                            <input min = "0" class="input-number input-milling" type="number"
+                                placeholder="Введите колличество п/м">
+                        </div>
+                        <div class="milling-processing">
+                            <div class="processing-radio">
+                                <input class="input-radio" type="radio" id="off-processing" name="milling">
+                                <label class="label-radio" for="off-processing">без обработки</label>
+                            </div>
+                            <div class="processing-radio">
+                                <input class="input-radio" type="radio" id="on-processing" name="milling">
+                                <label class="label-radio" for="on-processing">с обработкай</label>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
         <section class="section processing">
@@ -299,29 +300,30 @@
                         <div class="select-wrapper">
                             <select class="select">
                                 <option class="select-item" selected>Тип обработки</option>
-                                <option class="select-item" >Полировка прямая</option>
-                                <option class="select-item" >Шлифовка прямая</option>
-                                <option class="select-item" >Полировка ЧПУ, криволинейная</option>
-                                <option class="select-item" >Шлифовка ЧПУ, криволинейная</option>
+                                <option class="select-item">Полировка прямая</option>
+                                <option class="select-item">Шлифовка прямая</option>
+                                <option class="select-item">Полировка ЧПУ, криволинейная</option>
+                                <option class="select-item">Шлифовка ЧПУ, криволинейная</option>
                             </select>
                         </div>
                         <div class="add-services__processing">
                             <div class="processing-checkbox">
                                 <input class="input-checkbox" type="checkbox" id="сheckbox-service__processing">
-                                <label class="label-checkbox" for="сheckbox-service__processing">  Притупление углов 1мм <span class="price">(10₽/шт)</span></label>
+                                <label class="label-checkbox" for="сheckbox-service__processing"> Притупление углов 1мм
+                                    <span class="price">(10₽/шт)</span></label>
                             </div>
                             <input class="input-number corner" type="number" placeholder="Колличество углов">
                         </div>
                     </div>
                 </div>
                 <div class="select-facet">
-                    <h2 class="title-section" >Фацет
+                    <h2 class="title-section">Фацет
                         <span>(за п/м)</span>
                     </h2>
                     <div class="facet-width">
                         <div class="select-wrapper">
                             <select class="select">
-                                <option class="select-item"selected>ширина фацета</option>
+                                <option class="select-item" selected>ширина фацета</option>
                                 <option class="select-item">10мм</option>
                                 <option class="select-item">15мм</option>
                                 <option class="select-item">20мм</option>
@@ -339,12 +341,12 @@
                                 <label for="facet-curved">криволинейный</label>
                             </div>
                         </div>
-                        <p class="text">При выполнении прямолинейного фацета на 
-                            стекле толщиной до 6мм стоимость шлифовки 
+                        <p class="text">При выполнении прямолинейного фацета на
+                            стекле толщиной до 6мм стоимость шлифовки
                             остаточной кромки входит в стоимость фацета</p>
-                        <p class="text">Минимальный размер прямоугольной детали при 
+                        <p class="text">Минимальный размер прямоугольной детали при
                             изготовлении фацета 50*100мм</p>
-                    </div>  
+                    </div>
                 </div>
                 <div class="select-holes">
                     <h2 class="title-section">Сверление отверстий</h2>
@@ -357,25 +359,29 @@
                             <option class="select-item">Ø 50, 52,55,63,70</option>
                         </select>
                     </div>
-                        <input class="input-number holes " type="number" placeholder="Колличество отверстий">
+                    <input class="input-number holes " type="number" placeholder="Колличество отверстий">
                     <div class="checkbox-wrapper__holes active-holes">
                         <div class="holes-checkbox">
                             <input class="input-checkbox" type="checkbox" id="countersink">
-                            <label class="label-checkbox" for="countersink">зенковка под закалку отв. <span class="price"> 50₽/шт</span></label>
+                            <label class="label-checkbox" for="countersink">зенковка под закалку отв. <span
+                                    class="price"> 50₽/шт</span></label>
                         </div>
                         <input class="input-number countersink" type="number" placeholder="Колличество отверстий">
                     </div>
                     <div class="checkbox-wrapper__holes active-holes">
                         <div class="holes-checkbox">
                             <input class="input-checkbox" type="checkbox" id="manet">
-                            <label class="label-checkbox" for="manet">зенковка под манет<span class="price"> 100₽/шт</span></label>
+                            <label class="label-checkbox" for="manet">зенковка под манет<span class="price">
+                                    100₽/шт</span></label>
                         </div>
                         <input class="input-number manet" type="number" placeholder="Колличество отверстий">
                     </div>
                     <div class="checkbox-wrapper__holes active-holes">
                         <div class="holes-checkbox">
                             <input class="input-checkbox" type="checkbox" id="triplex-holes">
-                            <label class="label-checkbox" for="triplex-holes">Сверление отверстий в триплексе<span class="price-triplex__holes">сумма стоимости сверления в соответствующих стеклах</span></label>
+                            <label class="label-checkbox" for="triplex-holes">Сверление отверстий в триплексе<span
+                                    class="price-triplex__holes">сумма стоимости сверления в соответствующих
+                                    стеклах</span></label>
                         </div>
                         <input class="input-number triplex-holes" type="number" placeholder="Колличество отверстий">
                     </div>
@@ -383,14 +389,17 @@
                         <div class="checkbox-wrapper__cutout">
                             <div class="cutout-checkbox">
                                 <input class="input-checkbox" type="checkbox" id="cutout">
-                                <label class="label-checkbox" for="cutout">вырезы под фурнитуру, блок розеток<span class="price"> 600₽/шт</span></label>
+                                <label class="label-checkbox" for="cutout">вырезы под фурнитуру, блок розеток<span
+                                        class="price"> 600₽/шт</span></label>
                             </div>
-                            <input class="input-number cutout-accessories" type="number" placeholder="Колличество вырезов">
+                            <input class="input-number cutout-accessories" type="number"
+                                placeholder="Колличество вырезов">
                         </div>
                         <div class="checkbox-wrapper__cutout">
                             <div class="cutout-checkbox">
                                 <input class="input-checkbox" type="checkbox" id="bra">
-                                <label class="label-checkbox " for="bra">Вырез под бра<span class="price"> 950₽/шт</span></label>
+                                <label class="label-checkbox " for="bra">Вырез под бра<span class="price">
+                                        950₽/шт</span></label>
                             </div>
                             <input class="input-number cutout-bra" type="number" placeholder="Колличество вырезов">
                         </div>
@@ -398,7 +407,7 @@
                 </div>
             </div>
         </section>
-      <section class="section decor">
+        <section class="section decor">
             <div class="container">
                 <div class="engraving">
                     <h2 class="title-section">Гравирование
@@ -407,7 +416,7 @@
                     <div class="radio-box">
                         <input type="radio" id="polish" name="engraving">
                         <label for="polish">Полированная</label>
-        
+
                         <input type="radio" id="grind" name="engraving">
                         <label for="grind">Шлифованная</label>
                     </div>
@@ -490,7 +499,8 @@
                             </option>
                         </select>
                     </div>
-                    <p class="text">Минимально возможный размер для изготовления Vetropan 200*200м/ Минимальный заказ 1 кв.м.</p>
+                    <p class="text">Минимально возможный размер для изготовления Vetropan 200*200м/ Минимальный заказ 1
+                        кв.м.</p>
                 </div>
                 <div class="uv-printing">
                     <h2 class="title-section">УФ-печать
@@ -539,7 +549,8 @@
                     <h2 class="title-section">Триплекс
                         <span class="price">Min=0.25кв.м</span>
                     </h2>
-                    <p class="text">В общем случае, считаем стоимость стекла + стоимость пленки+ стоимость стекла и.т.д.</p>
+                    <p class="text">В общем случае, считаем стоимость стекла + стоимость пленки+ стоимость стекла и.т.д.
+                    </p>
                     <div class="select-wrapper">
                         <select class="select">
                             <option class="select-item" disabled selected>Тип пленки</option>
@@ -556,12 +567,12 @@
                         <span class="price">900₽</span>
                     </label>
                     <p class="text">
-                    1 слой пленки ( 0,38мм) рекомендуется для стекол до 6мм
-                    2 слоя пленки (0,38) рекомендуется для стекол от 8мм
-                    от 2-х слоев пленки рекомендуется для закаленных стекол
-                    При S более 4кв.м или весе от 90кг повышающий коэфициент 25%
-                    Стоимость криволинейно обработки триплекса складывается из стоимости 
-                    криволинейной обработки каждого стекла.</p>
+                        1 слой пленки ( 0,38мм) рекомендуется для стекол до 6мм
+                        2 слоя пленки (0,38) рекомендуется для стекол от 8мм
+                        от 2-х слоев пленки рекомендуется для закаленных стекол
+                        При S более 4кв.м или весе от 90кг повышающий коэфициент 25%
+                        Стоимость криволинейно обработки триплекса складывается из стоимости
+                        криволинейной обработки каждого стекла.</p>
                     <p class="text">При заказе от 20 м/кв. предусматриваются скидки</p>
                 </div>
             </div>
@@ -587,13 +598,14 @@
                     </div>
                     <input class="input-number input-packaging" type="number" placeholder="Колличество км">
                     <div class="packaging-inner">
-                        <input  type="checkbox" id="packaging">
-                        <label for="packaging">Упаковка в гофрокартон 
-                        <span class="price">200 ₽. за кв.м</span>
+                        <input type="checkbox" id="packaging">
+                        <label for="packaging">Упаковка в гофрокартон
+                            <span class="price">200 ₽. за кв.м</span>
                         </label>
                     </div>
-                    
-                    <p class="text">Претензии по качеству продукции из давальческого материала - не принимаются. Гарантии не распространяются.</p>
+
+                    <p class="text">Претензии по качеству продукции из давальческого материала - не принимаются.
+                        Гарантии не распространяются.</p>
                     <p class="text">Хранение на складе готовой продукции не более 5 дней. Далее-платно</p>
                     <p class="text">Минимальная стоимость заказа 3500₽.</p>
                 </div>
@@ -609,7 +621,7 @@
     </footer>
 
 
-    <script src="mainJS/script.js"></script>
+    <script src="mainJS/style-script.js"></script>
 </body>
 
 </html>
