@@ -312,7 +312,7 @@
                                 <label class="label-checkbox" for="сheckbox-service__processing"> Притупление углов 1мм
                                     <span class="price">(10₽/шт)</span></label>
                             </div>
-                            <input class="input-number corner" type="number" placeholder="Колличество углов">
+                            <input class="input-number corner" min="0" type="number" placeholder="Колличество углов">
                         </div>
                     </div>
                 </div>
@@ -322,7 +322,7 @@
                     </h2>
                     <div class="facet-width">
                         <div class="select-wrapper">
-                            <select class="select">
+                            <select class="select width-facet">
                                 <option class="select-item" selected>ширина фацета</option>
                                 <option class="select-item">10мм</option>
                                 <option class="select-item">15мм</option>
@@ -331,7 +331,7 @@
                                 <option class="select-item">30мм <span class="price">( от 6мм)</span></option>
                             </select>
                         </div>
-                        <div class="radio-box">
+                        <div class="radio-box__facet">
                             <div class="facet-radio">
                                 <input type="radio" class="input-radio" id="facet-straight" name="facet">
                                 <label for="facet-straight">прямолинейный</label>
@@ -350,16 +350,28 @@
                 </div>
                 <div class="select-holes">
                     <h2 class="title-section">Сверление отверстий</h2>
-                    <div class="select-wrapper">
-                        <select class="select">
-                            <option class="select-item" selected>Диаметр отверстий</option>
-                            <option class="select-item">Ø 5,6,7,8,10,12</option>
-                            <option class="select-item">Ø 14,16,18,20,22,26,28 </option>
-                            <option class="select-item">Ø 30,32,35,38,46,40,42,45,46,48</option>
-                            <option class="select-item">Ø 50, 52,55,63,70</option>
-                        </select>
+                    <div class="holes-box">
+                        <div class="holes-box__left">
+                            <div class="holes-inner">
+                                <p class="text">Ø 5,6,7,8,10,12</p>
+                                <input class="input-number holes " min="0" id="holes5-12" type="number" placeholder="Колличество отверстий">
+                            </div>
+                            <div class="holes-inner">
+                                <p class="text">Ø 14,16,18,20,22,26,28</p>
+                                <input class="input-number holes " min="0" id="holes14-28" type="number" placeholder="Колличество отверстий">
+                            </div>
+                        </div>
+                        <div class="holes-box__right">
+                            <div class="holes-inner">
+                                <p class="text">Ø 30,32,35,38,46,40,42,45,46,48</p>
+                                <input class="input-number holes " min="0" id="holes30-48" type="number" placeholder="Колличество отверстий">
+                            </div>
+                            <div class="holes-inner">
+                                <p class="text">Ø 50, 52,55,63,70</p>
+                                <input class="input-number holes " min="0" id="holes50-70" type="number" placeholder="Колличество отверстий">
+                            </div>
+                        </div>
                     </div>
-                    <input class="input-number holes " type="number" placeholder="Колличество отверстий">
                     <div class="checkbox-wrapper__holes active-holes">
                         <div class="holes-checkbox">
                             <input class="input-checkbox" type="checkbox" id="countersink">

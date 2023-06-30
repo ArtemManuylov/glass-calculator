@@ -19,18 +19,31 @@ const glass15mm = document.querySelector('#thickness-15mm');
 //стекло 12мм
 const glass19mm = document.querySelector('#thickness-19mm');
 
+
+
 // чекбокс сканирование шаблона
 const сheckboxScanning = document.querySelector('#сheckbox-service__scanning');
 // чекбокс резки 
 const сheckboxCutting = document.querySelector('#сheckbox-service__cutting');
 // чекбокс притупления 
 const сheckboxProcessing = document.querySelector('#сheckbox-service__processing');
+
 // инпут для колличество шаблонов
 const inputScanning = document.querySelector('.scanning');
 // инпут для колличества п/м
 const inputMilling = document.querySelector('.input-milling');
 // инпут для колл. углов 
 const corner = document.querySelector('.corner');
+
+// радио кнопки резки
+const radioProcessing = document.querySelector('.milling-processing');
+//селект фацета
+const selectFacet = document.querySelector('.width-facet');
+
+//блок с радио кнопками фацет
+const boxFacet = document.querySelector('.radio-box__facet');
+
+
 
 
 
@@ -53,8 +66,10 @@ selectThickness.addEventListener('input', openThickness);
 сheckboxCutting.addEventListener('click',()=>{
     if(сheckboxCutting.checked){
         inputMilling.style.display = 'flex';
+        radioProcessing.style.display = 'block';
     }else{
         inputMilling.style.display = 'none';
+        radioProcessing.style.display = 'none';
     };
 });
 //открываем инпут колл.углов
@@ -65,6 +80,15 @@ selectThickness.addEventListener('input', openThickness);
         corner.style.display = 'none';
     };
 });
+//открываем блок с радио кнопками
+selectFacet.addEventListener('click', ()=>{
+    if (selectFacet.value != 'ширина фацета'){
+        boxFacet.style.display = 'block';
+    }else{
+        boxFacet.style.display = 'none';
+    }
+});
+
 
 
 
