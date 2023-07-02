@@ -13,6 +13,12 @@ body {
   padding-right: 30px;
   padding-bottom: 30px;
 }
+.section{
+  max-width: 1140px;
+  border: #bbcff9 solid 10px;
+  border-radius: 25px;
+  margin: 10px auto;
+}
 .info-part {
   text-align: center;
   margin-top: 15px;
@@ -195,7 +201,7 @@ body {
 .packaging-inner{
   margin-top: 20px;
 }
-.input-packaging{
+.input-delivery{
   display: none;
 }
 .delivery{
@@ -209,7 +215,7 @@ body {
   background-color: #b5b4b48d;
 }
 .footer-inner{ 
-  height: 15vh;
+  height: 12vh;
   display: flex;
   justify-content: flex-end;
   align-items: center;

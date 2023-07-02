@@ -21,12 +21,20 @@ const glass19mm = document.querySelector('#thickness-19mm');
 
 
 
+
+
+
 // чекбокс сканирование шаблона
 const сheckboxScanning = document.querySelector('#сheckbox-service__scanning');
 // чекбокс резки 
 const сheckboxCutting = document.querySelector('#сheckbox-service__cutting');
 // чекбокс притупления 
 const сheckboxProcessing = document.querySelector('#сheckbox-service__processing');
+// чекбок вырез
+const checkboxCutout = document.querySelector('#cutout');
+//чекбок бра
+const checkboxBra = document.querySelector('#bra');
+
 
 // инпут для колличество шаблонов
 const inputScanning = document.querySelector('.scanning');
@@ -34,15 +42,32 @@ const inputScanning = document.querySelector('.scanning');
 const inputMilling = document.querySelector('.input-milling');
 // инпут для колл. углов 
 const corner = document.querySelector('.corner');
+//инпуты с диаметром оверстий
+const inputHoles1 = document.querySelector('#holes5-12');
+const inputHoles2 = document.querySelector('#holes14-28');
+const inputHoles3 = document.querySelector('#holes30-48');
+const inputHoles4 = document.querySelector('#holes50-70');
+//инпут вырез 
+const cutoutAccessories = document.querySelector('.cutout-accessories');
+//инпут бра
+const cutoutBra = document.querySelector('.cutout-bra');
+//инпут км доставки
+const inputDelivery = document.querySelector('.input-delivery');
 
 // радио кнопки резки
 const radioProcessing = document.querySelector('.milling-processing');
 //селект фацета
 const selectFacet = document.querySelector('.width-facet');
+//селект доставки
+const selectDelivery = document.querySelector('.select-delivery');
+
 
 //блок с радио кнопками фацет
 const boxFacet = document.querySelector('.radio-box__facet');
-
+//блок с диаметром отверстий
+const holesBox = document.querySelector('.holes-box');
+//блок с обработкой отверстий
+const activeHoles = document.querySelector('.active-holes');
 
 
 
@@ -51,7 +76,6 @@ const boxFacet = document.querySelector('.radio-box__facet');
 
 // СОБЫТИЯ
 selectThickness.addEventListener('input', openThickness);
-
 
 
 //открываем  инпут колличества шаблонов
@@ -88,7 +112,38 @@ selectFacet.addEventListener('click', ()=>{
         boxFacet.style.display = 'none';
     }
 });
-
+// открываем блок с обработкой отверстий
+holesBox.addEventListener('input',()=>{
+    if(inputHoles1.value || inputHoles2.value || inputHoles3.value || inputHoles4.value !=''){
+        activeHoles.style.display = 'block';
+    }else{
+        activeHoles.style.display = 'none';
+    }
+});
+// открываем инпут чекбокса вырез
+checkboxCutout.addEventListener('click',()=>{
+    if(checkboxCutout.checked){
+        cutoutAccessories.style.display = 'flex';
+    }else{
+        cutoutAccessories.style.display = 'none';
+    }
+});
+// открываем инпут чекбокса бра
+checkboxBra.addEventListener('click',()=>{
+    if(checkboxBra.checked){
+        cutoutBra.style.display = 'flex';
+    }else{
+        cutoutBra.style.display = 'none';
+    }
+});
+// открываем инпут км доставки
+selectDelivery.addEventListener('input',()=>{
+    if(selectDelivery.value == "По межгороду 35 ₽/км"){
+        inputDelivery.style.display = "flex";
+    }else{
+        inputDelivery.style.display = "none";
+    }
+})
 
 
 

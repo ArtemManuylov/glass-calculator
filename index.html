@@ -372,30 +372,32 @@
                             </div>
                         </div>
                     </div>
-                    <div class="checkbox-wrapper__holes active-holes">
-                        <div class="holes-checkbox">
-                            <input class="input-checkbox" type="checkbox" id="countersink">
-                            <label class="label-checkbox" for="countersink">зенковка под закалку отв. <span
-                                    class="price"> 50₽/шт</span></label>
+                    <div class="active-holes">
+                        <div class="checkbox-wrapper__holes ">
+                            <div class="holes-checkbox">
+                                <input class="input-checkbox" type="checkbox" id="countersink">
+                                <label class="label-checkbox" for="countersink">зенковка под закалку отв. <span
+                                        class="price"> 50₽/шт</span></label>
+                            </div>
+                            <input class="input-number countersink" min="0" type="number" placeholder="Колличество отверстий">
                         </div>
-                        <input class="input-number countersink" type="number" placeholder="Колличество отверстий">
-                    </div>
-                    <div class="checkbox-wrapper__holes active-holes">
-                        <div class="holes-checkbox">
-                            <input class="input-checkbox" type="checkbox" id="manet">
-                            <label class="label-checkbox" for="manet">зенковка под манет<span class="price">
-                                    100₽/шт</span></label>
+                        <div class="checkbox-wrapper__holes">
+                            <div class="holes-checkbox">
+                                <input class="input-checkbox" type="checkbox" id="manet">
+                                <label class="label-checkbox" for="manet">зенковка под манет<span class="price">
+                                        100₽/шт</span></label>
+                            </div>
+                            <input class="input-number manet" min="0" type="number" placeholder="Колличество отверстий">
                         </div>
-                        <input class="input-number manet" type="number" placeholder="Колличество отверстий">
-                    </div>
-                    <div class="checkbox-wrapper__holes active-holes">
-                        <div class="holes-checkbox">
-                            <input class="input-checkbox" type="checkbox" id="triplex-holes">
-                            <label class="label-checkbox" for="triplex-holes">Сверление отверстий в триплексе<span
-                                    class="price-triplex__holes">сумма стоимости сверления в соответствующих
-                                    стеклах</span></label>
+                        <div class="checkbox-wrapper__holes">
+                            <div class="holes-checkbox">
+                                <input class="input-checkbox" type="checkbox" id="triplex-holes">
+                                <label class="label-checkbox" for="triplex-holes">Сверление отверстий в триплексе<span
+                                        class="price-triplex__holes">сумма стоимости сверления в соответствующих
+                                        стеклах</span></label>
+                            </div>
+                            <input class="input-number triplex-holes" min="0" type="number" placeholder="Колличество отверстий">
                         </div>
-                        <input class="input-number triplex-holes" type="number" placeholder="Колличество отверстий">
                     </div>
                     <div class="checkbox-inner">
                         <div class="checkbox-wrapper__cutout">
@@ -404,7 +406,7 @@
                                 <label class="label-checkbox" for="cutout">вырезы под фурнитуру, блок розеток<span
                                         class="price"> 600₽/шт</span></label>
                             </div>
-                            <input class="input-number cutout-accessories" type="number"
+                            <input class="input-number cutout-accessories" min="0" type="number"
                                 placeholder="Колличество вырезов">
                         </div>
                         <div class="checkbox-wrapper__cutout">
@@ -413,7 +415,7 @@
                                 <label class="label-checkbox " for="bra">Вырез под бра<span class="price">
                                         950₽/шт</span></label>
                             </div>
-                            <input class="input-number cutout-bra" type="number" placeholder="Колличество вырезов">
+                            <input class="input-number cutout-bra" min="0" type="number" placeholder="Колличество вырезов">
                         </div>
                     </div>
                 </div>
@@ -541,7 +543,7 @@
                         <p class="text">Из цветного стекла декоры (ассортимент на складе)
                             <span class="price price-section">От 200р за шт.</span>
                         </p>
-                        <input class="input-number" type="number" placeholder="Колличество штук">
+                        <input class="input-number" min="0" type="number" placeholder="Колличество штук">
                     </div>
                 </div>
             </div>
@@ -594,7 +596,7 @@
                 <div class="type-delivery">
                     <h2 class="title-section">Доставка</h2>
                     <div class="select-wrapper">
-                        <select class="select">
+                        <select class="select select-delivery">
                             <option class="select-item" disabled selected>Тип доставки</option>
                             <option class="select-item">Самовывоз</option>
                             <option class="select-item">Доставка по Краснодару до подъезда без разгрузки
@@ -608,7 +610,7 @@
                             </option>
                         </select>
                     </div>
-                    <input class="input-number input-packaging" type="number" placeholder="Колличество км">
+                    <input class="input-number input-delivery" min="0" type="number" placeholder="Колличество км">
                     <div class="packaging-inner">
                         <input type="checkbox" id="packaging">
                         <label for="packaging">Упаковка в гофрокартон
