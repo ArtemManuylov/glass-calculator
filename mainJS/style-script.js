@@ -212,4 +212,5 @@ function openThickness(){
     }else{
         glass19mm.style.display = "none";
     };
+    
 }
