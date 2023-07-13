@@ -9,21 +9,26 @@ let nameGlass;
 let priceGlass;
 // метр квадратный стекла
 let squareMeter;
+// переменная для вычисления цены
+let priceCulc;
 
 
 //стоймость стекла
 const totalPrice = document.querySelector('.total-price')
-
-
 // блок с инпутами размера
 const inputSize = document.querySelector('.input__size');
-
+// блок с радио кнопками резки
+const cuttingRadio = document.querySelector('.cutting-radio');
 // инпуты на ширину и высоту
 const inputWidth = document.querySelector('.width');
 const inputHeigth = document.querySelector('.height');
-
 // селект с названием стекла
 const selectName = document.querySelectorAll('.select-name');
+// радио кнопка непрямоугольной резки
+const notRectangularBtn = document.querySelector('.not-rectangular');
+// радио кнопка криволинейной резки
+const curvedBtn = document.querySelector('.curved-cutting');
+
 
 
 
@@ -48,7 +53,6 @@ inputSize.addEventListener('input',()=>{
 });
 
 
-//функция  
 for (let i = 0 ; i < selectName.length; i++) {
     selectName[i].addEventListener('input', (e)=>{
         let indexGlass = selectName[i].selectedIndex
@@ -58,13 +62,38 @@ for (let i = 0 ; i < selectName.length; i++) {
         calcPrice();
     });
  };
+
 // вычисляем сумму исходя из цены и квадратного метра стекла
-// и отображаем её
+// и отображаем ее
 function calcPrice(){
-    totalPrice.textContent = ((priceGlass * squareMeter).toFixed(1)) + ' ₽';
+    priceCulc = Number((priceGlass * squareMeter).toFixed(1));
+    totalPrice.textContent = priceCulc + ' ₽';
     if(totalPrice.textContent == 'NaN ₽'){
-        totalPrice.textContent = '0 ₽';
+        totalPrice.textContent = 0 + ' ₽';
     }
     return
 };
-calcPrice()
+
+//добавление стоймость резки исходя из выбранного типа
+cuttingRadio.addEventListener('input', ()=>{
+    if (notRectangularBtn.checked){
+        totalPrice.textContent = (priceCulc * 1.1).toFixed(0) + ' ₽';
+    }else if(curvedBtn.checked){
+        totalPrice.textContent = (priceCulc * 1.3).toFixed(0) + ' ₽';
+    }
+    else{
+        totalPrice.textContent = priceCulc + ' ₽';
+    }
+});
+
+// узнаем колличиство шаблонов и добавляем стоймость за шт.
+inputScanning.addEventListener('change',()=>{
+    let priceScan;
+    if(priceCulc === undefined){
+        priceCulc = 1500 * (Number(inputScanning.value));
+        totalPrice.textContent =  priceCulc + ' ₽';
+    }else{
+        priceScan = (Number(inputScanning.value)*1500);
+        totalPrice.textContent = priceCulc + priceScan + ' ₽';
+    };
+});
