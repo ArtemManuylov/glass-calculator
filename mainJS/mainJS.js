@@ -11,6 +11,10 @@ let priceGlass;
 let squareMeter;
 // переменная для вычисления цены
 let priceCulc;
+// ценник шаблона;
+let templatePrice = 1500;
+
+
 
 
 //стоймость стекла
@@ -52,7 +56,7 @@ inputSize.addEventListener('input',()=>{
     calcPrice();
 });
 
-
+// накидываем события на все названия 
 for (let i = 0 ; i < selectName.length; i++) {
     selectName[i].addEventListener('input', (e)=>{
         let indexGlass = selectName[i].selectedIndex
@@ -71,7 +75,6 @@ function calcPrice(){
     if(totalPrice.textContent == 'NaN ₽'){
         totalPrice.textContent = 0 + ' ₽';
     }
-    return
 };
 
 //добавление стоймость резки исходя из выбранного типа
@@ -87,13 +90,24 @@ cuttingRadio.addEventListener('input', ()=>{
 });
 
 // узнаем колличиство шаблонов и добавляем стоймость за шт.
-inputScanning.addEventListener('change',()=>{
-    let priceScan;
-    if(priceCulc === undefined){
-        priceCulc = 1500 * (Number(inputScanning.value));
-        totalPrice.textContent =  priceCulc + ' ₽';
-    }else{
-        priceScan = (Number(inputScanning.value)*1500);
-        totalPrice.textContent = priceCulc + priceScan + ' ₽';
-    };
-});
+сheckboxScanning.addEventListener('click',()=>{
+        let scanningPrice = templatePrice;
+        if(inputScanning.style.display == 'flex'){
+            inputScanning.addEventListener('change', ()=>{
+                if (priceCulc == undefined){
+                    totalPrice.textContent = (inputScanning.value * scanningPrice) + ' ₽';
+                }else{
+                    totalPrice.textContent = (inputScanning.value * scanningPrice) + priceCulc + ' ₽';
+                };
+            })
+        }else{
+            if(priceCulc == undefined){
+                priceCulc = 0;
+                totalPrice.textContent = priceCulc + ' ₽';
+            }else{
+                totalPrice.textContent = priceCulc + ' ₽';
+            }
+            inputScanning.value = 0;
+            
+        }
+})
