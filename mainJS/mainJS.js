@@ -13,7 +13,8 @@ let squareMeter;
 let priceCulc;
 // ценник шаблона;
 let templatePrice = 1500;
-
+//PRICE
+let basicPrice = 0;
 
 
 
@@ -75,39 +76,44 @@ function calcPrice(){
     if(totalPrice.textContent == 'NaN ₽'){
         totalPrice.textContent = 0 + ' ₽';
     }
+    basicPrice = priceCulc;
 };
 
 //добавление стоймость резки исходя из выбранного типа
-cuttingRadio.addEventListener('input', ()=>{
-    if (notRectangularBtn.checked){
-        totalPrice.textContent = (priceCulc * 1.1).toFixed(0) + ' ₽';
+cuttingRadio.addEventListener('change', ()=>{
+    if(notRectangularBtn.checked){
+        let price1 = (priceCulc * 1.1).toFixed(0);
+        basicPrice = Number(price1);
+        totalPrice.textContent = price1 + ' ₽';
     }else if(curvedBtn.checked){
-        totalPrice.textContent = (priceCulc * 1.3).toFixed(0) + ' ₽';
-    }
-    else{
+        let price2 = (priceCulc * 1.3).toFixed(0);
+        basicPrice = Number(price2);
+        totalPrice.textContent = price2 + ' ₽';
+    }else{
         totalPrice.textContent = priceCulc + ' ₽';
+        basicPrice = Number(priceCulc);
+    };
+    if(priceCulc == undefined){
+        totalPrice.textContent = 0 + ' ₽';
+        basicPrice = 0;
     }
 });
 
 // узнаем колличиство шаблонов и добавляем стоймость за шт.
 сheckboxScanning.addEventListener('click',()=>{
-        let scanningPrice = templatePrice;
-        if(inputScanning.style.display == 'flex'){
-            inputScanning.addEventListener('change', ()=>{
-                if (priceCulc == undefined){
-                    totalPrice.textContent = (inputScanning.value * scanningPrice) + ' ₽';
-                }else{
-                    totalPrice.textContent = (inputScanning.value * scanningPrice) + priceCulc + ' ₽';
-                };
-            })
-        }else{
-            if(priceCulc == undefined){
-                priceCulc = 0;
-                totalPrice.textContent = priceCulc + ' ₽';
+    if(inputScanning.style.display != 'flex'){
+        totalPrice.textContent = basicPrice + ' ₽';
+        inputScanning.value = 0;
+    }else{
+        inputScanning.addEventListener('input',()=>{
+            if(basicPrice == 0){
+                let scanningPrice = inputScanning.value * templatePrice;
+                totalPrice.textContent = scanningPrice + ' ₽';
             }else{
-                totalPrice.textContent = priceCulc + ' ₽';
+                let scanningPrice = basicPrice + (inputScanning.value * templatePrice);
+                totalPrice.textContent = scanningPrice + ' ₽';
             }
-            inputScanning.value = 0;
-            
-        }
-})
+    })
+    }       
+});
+
