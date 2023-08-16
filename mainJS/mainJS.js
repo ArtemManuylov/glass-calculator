@@ -1,4 +1,4 @@
-// толщина стекла
+/* // толщина стекла
 let thicknessGlass;
 // ширина и высота стекла
 let widthGlass;
@@ -7,15 +7,22 @@ let heightGlass;
 let nameGlass;
 // цена стекла
 let priceGlass;
+// ценна за все добавленные услуги
+let priceServices = 0;
 // метр квадратный стекла
 let squareMeter;
 // переменная для вычисления цены
 let priceCulc;
 // ценник шаблона;
 let templatePrice = 1500;
+// ценник за шаблон за колл шаблонов
+let scanningPrice;
 //PRICE
 let basicPrice = 0;
-
+// цена резки фризой за п/м в зависимости от толщины
+let thicknessMillingPrice;
+//цена резки фризой за п/м в зависимости от п/м
+let millingPrice;
 
 
 //стоймость стекла
@@ -77,18 +84,19 @@ function calcPrice(){
         totalPrice.textContent = 0 + ' ₽';
     }
     basicPrice = priceCulc;
+    priceServices = priceCulc;
 };
 
 //добавление стоймость резки исходя из выбранного типа
 cuttingRadio.addEventListener('change', ()=>{
     if(notRectangularBtn.checked){
-        let price1 = (priceCulc * 1.1).toFixed(0);
-        basicPrice = Number(price1);
-        totalPrice.textContent = price1 + ' ₽';
+        let price1 = Number((priceCulc * 1.1).toFixed(0));
+        priceServices = price1;
+        totalPrice.textContent = priceServices + ' ₽';
     }else if(curvedBtn.checked){
-        let price2 = (priceCulc * 1.3).toFixed(0);
-        basicPrice = Number(price2);
-        totalPrice.textContent = price2 + ' ₽';
+        let price2 = Number((priceCulc * 1.3).toFixed(0));
+        priceServices = price2;
+        totalPrice.textContent = priceServices + ' ₽';
     }else{
         totalPrice.textContent = priceCulc + ' ₽';
         basicPrice = Number(priceCulc);
@@ -102,18 +110,35 @@ cuttingRadio.addEventListener('change', ()=>{
 // узнаем колличиство шаблонов и добавляем стоймость за шт.
 сheckboxScanning.addEventListener('click',()=>{
     if(inputScanning.style.display != 'flex'){
-        totalPrice.textContent = basicPrice + ' ₽';
+        totalPrice.textContent = priceServices + ' ₽';
         inputScanning.value = 0;
     }else{
         inputScanning.addEventListener('input',()=>{
-            if(basicPrice == 0){
-                let scanningPrice = inputScanning.value * templatePrice;
-                totalPrice.textContent = scanningPrice + ' ₽';
+            if(priceServices == 0){
+                totalPrice.textContent  = inputScanning.value * templatePrice + ' ₽';
             }else{
-                let scanningPrice = basicPrice + (inputScanning.value * templatePrice);
-                totalPrice.textContent = scanningPrice + ' ₽';
+                scanningPrice = inputScanning.value * templatePrice; 
+                totalPrice.textContent = priceServices + scanningPrice + ' ₽';
             }
     })
     }       
 });
+// узнаем цену резки за п/м в зависимости от толщины
+selectThickness.addEventListener('change', ()=>{
+    //находим индекс выбранного Option 
+    let indexOption = selectThickness.options.selectedIndex;
 
+    //по индексу находим data-attribute
+    let OptionHtml = selectThickness.options[indexOption];
+
+    //создаем переменную с значением data-attribute
+    // переменная thicknessMillingPrice является ценной резки без обработки 
+    thicknessMillingPrice = Number(OptionHtml.dataset.price);
+})
+
+// исходя из колличества п/м узнаем стоймость резки фрезой
+inputMilling.addEventListener('input', ()=>{
+    millingPrice = Number((thicknessMillingPrice * Number(inputMilling.value)).toFixed(0));
+    console.log(priceServices)
+
+}) */

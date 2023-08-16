@@ -28,15 +28,15 @@
                 <div class="select-wrapper">
                     <select class="select select-thickness">
                         <option class="select-item" selected>Выберите толщину стекла</option>
-                        <option class="select-item" value="mirror">Зеркало</option>
-                        <option class="select-item" value="thickness-4mm">4 мм</option>
-                        <option class="select-item" value="thickness-5mm">5 мм</option>
-                        <option class="select-item" value="thickness-6mm">6 мм</option>
-                        <option class="select-item" value="thickness-8mm">8 мм</option>
-                        <option class="select-item" value="thickness-10mm">10 мм</option>
-                        <option class="select-item" value="thickness-12mm">12 мм</option>
-                        <option class="select-item" value="thickness-15mm">15 мм</option>
-                        <option class="select-item" value="thickness-19mm">19 мм</option>
+                        <option class="select-item" data-price="1023" value="mirror">Зеркало</option>
+                        <option class="select-item" data-price="1023" value="thickness-4mm">4 мм</option>
+                        <option class="select-item" data-price="1023" value="thickness-5mm">5 мм</option>
+                        <option class="select-item" data-price="1023" value="thickness-6mm">6 мм</option>
+                        <option class="select-item" data-price="1023" value="thickness-8mm">8 мм</option>
+                        <option class="select-item" data-price="1276" value="thickness-10mm">10 мм</option>
+                        <option class="select-item" data-price="1276" value="thickness-12mm">12 мм</option>
+                        <option class="select-item" data-price="1529" value="thickness-15mm">15 мм</option>
+                        <option class="select-item" data-price="1529" value="thickness-19mm">19 мм</option>
                     </select>
                 </div>
                 <div class="select-part glass">
@@ -186,7 +186,7 @@
                                 <label class="label-checkbox" for="сheckbox-service__cutting"> Резка фрезой за
                                     п/м</label>
                             </div>
-                            <input min="0" class="input-number input-milling" type="number"
+                            <input min="0" class="input-number input-milling" type="number" step="0.1"
                                 placeholder="Введите колличество п/м">
                         </div>
                         <div class="milling-processing">
@@ -558,6 +558,7 @@
 
     <script src="mainJS/style-script.js"></script>
     <script src="mainJS/mainJS.js"></script>
+    <script src="mainJS/newJS.js"></script>
 </body>
 
 </html>
