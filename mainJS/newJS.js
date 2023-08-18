@@ -20,6 +20,8 @@ const notRectangularBtn = document.querySelector('.not-rectangular');
 const curvedBtn = document.querySelector('.curved-cutting');
 
 
+
+
 // ПЕРЕМЕННЫЕ 
 
 //толщина стекла
@@ -40,6 +42,9 @@ let priceGlass;
 
 // ценна за все услуги
 let totalPrice = 0;
+
+//ценник скана
+let priceScanning = 1500;
 
 
 // СОБЫТИЯ
@@ -109,7 +114,19 @@ cuttingRadio.addEventListener('change',()=>{
 
 
 
-//функция отображение ценны на экране
+//функция отображение цены на экране
 function displayScreen(){
     displayPrice.textContent = totalPrice  + ' ₽'
 }
+
+
+//скан шаблона, переменная inputScanning из style-script
+inputScanning.addEventListener('input',()=>{
+    if (displayPrice.textContent != '0 ₽'){
+        let numPriceScan = priceGlass + inputScanning.value * priceScanning
+        displayPrice.textContent = numPriceScan + ' ₽';
+        totalPrice = numPriceScan;
+    }else{
+        displayPrice.textContent = inputScanning.value * priceScanning + ' ₽';
+    }
+})
