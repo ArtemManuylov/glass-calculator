@@ -19,6 +19,12 @@ const notRectangularBtn = document.querySelector('.not-rectangular');
 // радио кнопка криволинейной резки
 const curvedBtn = document.querySelector('.curved-cutting');
 
+// радио кнопка прямоугольной резки
+const rectangularBtn = document.querySelector('.rectangular');
+
+// чекбокс шаблона 
+const checkboxScan = document.querySelector('#сheckbox-service__scanning');
+
 
 
 
@@ -37,14 +43,19 @@ let heightGlass;
 // колличество кв/м в изделии
 let numbersMeters;
 
-// ценна изделия исходя из ка/м
+// цена изделия исходя из ка/м
 let priceGlass;
 
-// ценна за все услуги
+// цена за все услуги
 let totalPrice = 0;
 
 //ценник скана
 let priceScanning = 1500;
+// ценник коэфицента резки
+let priceCoefficient = 0;
+//цена со сканом
+let numPriceScan = 0;
+
 
 
 // СОБЫТИЯ
@@ -101,14 +112,13 @@ inputSize.addEventListener('input',()=>{
 //добавление стоймость резки исходя из выбранного типа
 cuttingRadio.addEventListener('change',()=>{
     if(notRectangularBtn.checked){
-        totalPrice = (priceGlass * 1.1).toFixed(0);
+        priceCoefficient = Number((priceGlass * 1.1).toFixed(0));
+        totalPrice = priceCoefficient;
         displayScreen();
     }else if(curvedBtn.checked){
-        totalPrice = (priceGlass * 1.3).toFixed(0);
+        priceCoefficient = Number((priceGlass * 1.3).toFixed(0));
+        totalPrice = priceCoefficient; 
         displayScreen();
-    }else{
-        totalPrice = priceGlass * 1;
-        displayPrice.textContent = totalPrice  + ' ₽';
     }
 })
 
@@ -122,11 +132,16 @@ function displayScreen(){
 
 //скан шаблона, переменная inputScanning из style-script
 inputScanning.addEventListener('input',()=>{
-    if (displayPrice.textContent != '0 ₽'){
-        let numPriceScan = priceGlass + inputScanning.value * priceScanning
-        displayPrice.textContent = numPriceScan + ' ₽';
+    if(displayPrice.textContent != '0 ₽'){
+        numPriceScan = priceCoefficient + (inputScanning.value * priceScanning);
         totalPrice = numPriceScan;
+        displayScreen();
     }else{
         displayPrice.textContent = inputScanning.value * priceScanning + ' ₽';
     }
+        if(priceCoefficient == 0){
+            priceCoefficient = priceGlass;
+            totalPrice = priceCoefficient + (inputScanning.value * priceScanning);
+            displayScreen();
+        }
 })
